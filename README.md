@@ -1,2 +1,5 @@
 # carefree_dental
-take-home exam
+
+Created for a take-home exam.  
+
+Built with AngularJS following John Papa's style guide. 
