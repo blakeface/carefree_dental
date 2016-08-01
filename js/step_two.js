@@ -3,7 +3,7 @@
 
   angular
   .module('dental')
-  .directive('stepTwo', stepTwo);
+  .directive('dentalStepTwo', stepTwo);
 
   function stepTwo(){
     const directive = {

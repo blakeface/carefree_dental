@@ -3,12 +3,12 @@
 
   angular
   .module('dental')
-  .directive('stepOne', stepOne);
+  .directive('dentalStepOne', stepOne);
 
   function stepOne(){
     const directive = {
       scope: '=',
-      restrict: "E",
+      restrict: 'E',
       templateUrl: '/partials/step_one.html',
       controller: Controller,
       controllerAs: 'vm',
@@ -17,9 +17,12 @@
     return directive;
   };
 
-  Controller.$inject = [];
-  function Controller() {
+  Controller.$inject = ['$scope'];
+  function Controller($scope) {
     const vm = this;
+
+    vm.faces = ['hi', 'bye'];
+    vm.testing = 'hiiii';
   };
 
 
