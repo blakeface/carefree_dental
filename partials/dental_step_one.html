@@ -1,10 +1,9 @@
 <span class="card">
-
   <h3><span class="purple">Step 1:</span> Select how many people are in your household</h3>
 
   <div class="people-container">
     <div class="person" ng-click="vm.selectNumberOfPeople($index)"
-    ng-repeat="person in vm.getNumberOfPeople(vm.numberOfPeople) track by $index">
+    ng-repeat="person in vm.createArray(vm.maxNumOfPeople) track by $index">
       <i class="fa fa-female fa-4x" aria-hidden="true" ng-class-even="'show'"></i>
       <i class="fa fa-male fa-4x" aria-hidden="true" ng-class-odd="'show'"></i>
     </div>
@@ -15,5 +14,4 @@
       Please select the number of people in your household before proceeding
     </p>
   </div>
-
 </span>

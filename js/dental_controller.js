@@ -5,32 +5,25 @@
   .module('dental')
   .controller('MainCtrl', MainCtrl);
 
-  MainCtrl.$inject = ['$scope', 'DentalFactory', '$log'];
-  function MainCtrl($scope, DentalFactory, $log) {
+  MainCtrl.$inject = ['$scope'];
+  function MainCtrl($scope) {
     const vm = this;
-    let patients = 0;
-    
-    vm.numberOfPeople = 10;
-    vm.getNumberOfPeople = function (num) {
-      return new Array(num);
-    }
-    vm.selectNumberOfPeople = function (i) {
-      DentalFactory.setNumberOfPeople(i);
-    }
-    vm.services = ['Oral Exam', 'Cleaning', 'Fillings', 'X-Rays', 'Root Canal', 'Crown', 'Upper Denture', 'Braces'];
-    patients = DentalFactory.getNumberOfPeople();
 
-    $scope.$watch(function(){
-      return DentalFactory.getNumberOfPeople();
-    }, function(newValue, oldValue){
-      patients = newValue;
-      vm.getNumberOfPatients(patients)
-    });
-    vm.getNumberOfPatients = function (num) {
-      return new Array(num)
+    vm.maxNumOfPeople = 10;
+    vm.createArray = function (n) {
+      return new Array(n);
     }
+
+    vm.selectNumberOfPeople = function (num) {
+      vm.tableRows = [];
+      for (var i = 0; i < num+1; i++) {
+        vm.tableRows[i] = {
+          annualCost: 0,
+        }
+      }
+    }
+
+    vm.services = ['Oral Exam', 'Cleaning', 'Fillings', 'X-Rays', 'Root Canal', 'Crown', 'Upper Denture', 'Braces'];
 
   };
-
-
 })()

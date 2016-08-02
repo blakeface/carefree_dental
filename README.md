@@ -14,7 +14,6 @@ Created for a take-home exam.
   3.  dental_controller.js  
   4.  dental_directives.js  
 
-
 ##Dependencies:
 1.  AngularJS 1.5.8
 2.  Bootstrap 3.3.7

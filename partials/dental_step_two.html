@@ -10,7 +10,7 @@
     </p>
   </div>
 
-  <table class="table-responsive">
+  <table class="table">
     <thead>
       <tr>
         <td></td>
@@ -19,6 +19,7 @@
         </td>
         <td></td>
       </tr>
+
       <tr>
         <th># of Individuals</th>
         <th ng-repeat="service in vm.services track by $index">
@@ -30,11 +31,17 @@
         <th>Annual Savings*</th>
       </tr>
     </thead>
+
     <tbody>
-      <tr ng-repeat="patient in vm.getNumberOfPatients() track by $index">
-        <td>{{patient}}</td>
+      <tr ng-repeat="row in vm.tableRows track by $index">
+        <td>Person {{$index + 1}}</td>
+        <td ng-repeat="service in vm.services track by $index">
+          <input type="checkbox" value="{{service}}">
+        </td>
+        <td>{{row.annualCost}}</td>
       </tr>
     </tbody>
   </table>
+  <h3>{{vm.tableRows.length}}</h3>
 
 </span>

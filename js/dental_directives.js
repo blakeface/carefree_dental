@@ -17,9 +17,6 @@
 
   function stepOne(){
     const directive = {
-      scope: {
-        vm: '=',
-      },
       restrict: 'E',
       templateUrl: '/partials/dental_step_one.html',
       controller: 'MainCtrl',
@@ -31,9 +28,6 @@
 
   function stepTwo(){
     const directive = {
-      scope: {
-        vm: '=',
-      },
       restrict: 'E',
       templateUrl: '/partials/dental_step_two.html',
       controller: 'MainCtrl',
