@@ -19,14 +19,19 @@
     return directive;
   };
 
-  Controller.$inject = ['$scope'];
-  function Controller($scope) {
+  Controller.$inject = ['DentalFactory'];
+  function Controller(DentalFactory) {
     const vm = this;
+    let patients = 0;
 
-    vm.numberOfFaces = 10;
-    vm.getNumberOfFaces = function (num) {
+    vm.numberOfPeople = 10;
+    vm.getNumberOfPeople = function (num) {
       return new Array(num);
     }
+    vm.selectNumberOfPeople = function (i) {
+      DentalFactory.setNumberOfPeople(i);
+    }
+
   };
 
 

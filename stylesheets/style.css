@@ -2,27 +2,34 @@
   color: purple;
 }
 
-.faces-container,
-.purple-faces-container {
+.card {
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+}
+
+.people-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
-  max-width: 800px;
+  max-width: 600px;
 }
 
-.purple-faces-container {
-  margin-top: -64px;
+.person > i {
+  display: none;
 }
 
-.purple-faces-container > a,
-.purple-faces-container > a:hover ~ a,
-.purple-faces-container > a:active ~ a {
-  visibility: hidden;
+.show {
+  display: inherit;
+  color: black;
 }
 
-.purple-faces-container:hover > a,
-.purple-faces-container:active > a {
-  visibility: visible;
+.people-container:hover > .person > i {
+  color: purple;
+}
+
+.people-container > .person:hover ~ .person > i {
+  color: black;
 }
 
 .note {
