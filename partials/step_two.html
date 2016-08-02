@@ -1,4 +1,4 @@
-<span>
+<span class="card">
   <h3><span class="purple">Step 2:</span> Select the services you need to see your savings:</h3>
 
   <div class="note">
@@ -30,10 +30,10 @@
         <th>Annual Savings*</th>
       </tr>
     </thead>
-      <tr>
-
-      </tr>
     <tbody>
+      <tr ng-repeat="patient in vm.getNumberOfPatients() track by $index">
+        <td>{{patient}}</td>
+      </tr>
     </tbody>
   </table>
 

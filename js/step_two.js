@@ -30,9 +30,13 @@
       return DentalFactory.getNumberOfPeople();
     }, function(newValue, oldValue){
       patients = newValue;
+      vm.getNumberOfPatients(patients)
       $log.info(patients);
     });
 
+    vm.getNumberOfPatients = function (num) {
+      return new Array(num)
+    }
 
   };
 })()

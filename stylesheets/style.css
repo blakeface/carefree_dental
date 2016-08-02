@@ -41,6 +41,10 @@
   margin: 0px;
 }
 
+table {
+  margin-top: 30px;
+}
+
 thead > tr:first-child > td {
   transform: rotate(270deg);
   text-align: center;
