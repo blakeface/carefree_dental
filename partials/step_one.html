@@ -1,12 +1,19 @@
 <span>
   <h3><span class="purple">Step 1:</span> Select how many people are in your household</h3>
 
-  <h1>Number of faces: {{vm.numberOfFaces}}</h1>
-  <!-- <div class="faces-container" ng-repeat="face in vm.numberOfFaces">
-    <h3>{{face}}</h3>
-  </div> -->
+  <div class="faces-container">
+    <a ng-repeat="face in vm.getNumber(vm.numberOfFaces) track by $index">
+      <img ng-src="/stylesheets/images/toothy_emoticon.png" alt="toothy smiley face"/>
+    </a>
+  </div>
+  <div class="purple-faces-container">
+    <a ng-repeat="face in vm.getNumber(vm.numberOfFaces) track by $index">
+      <img ng-src="/stylesheets/images/toothy_emoticon_purple.png" alt="purple toothy smiley face"/>
+    </a>
+  </div>
 
   <p>
     Please select the number of people in your household before proceeding
   </p>
+
 </span>

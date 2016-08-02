@@ -24,7 +24,9 @@
     const vm = this;
 
     vm.numberOfFaces = 10;
-
+    vm.getNumber = function (num) {
+      return new Array(num);
+    }
   };
 
 

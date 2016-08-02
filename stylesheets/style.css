@@ -2,6 +2,24 @@
   color: purple;
 }
 
-.faces-container {
+.faces-container,
+.purple-faces-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
 
+.purple-faces-container {
+  margin-top: -64px;
+}
+
+.purple-faces-container > a,
+.purple-faces-container > a:hover ~ a,
+.purple-faces-container > a:active ~ a {
+  visibility: hidden;
+}
+
+.purple-faces-container:hover > a,
+.purple-faces-container:active > a {
+  visibility: visible;
 }
