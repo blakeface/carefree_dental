@@ -3,12 +3,16 @@
 Created for a take-home exam.  
 
 ##To import card:  
-1.  add ```<dental-card />``` to your index.html
-2.  add ```
-  <script src="/js/module.js" charset="utf-8"></script>
-  <script src="/js/factory.js" charset="utf-8"></script>
-  <script src="/js/controller.js" charset="utf-8"></script>
-  <script src="/js/directives.js" charset="utf-8"></script>```
+1.  Add a  ```<dental-card />``` element to index.html or .html partial
+2.  Import the following partials:
+  1.  dental_card.html  
+  2.  dental_step_one.html  
+  3.  dental_step_two.html  
+3.  Import the following JavaScript files and reference in your index.html head (in order):
+  1.  dental_module.js  
+  2.  dental_factory.js  
+  3.  dental_controller.js  
+  4.  dental_directives.js  
 
 
 ##Dependencies:

@@ -10,7 +10,7 @@
   function dentalCard(){
     const directive = {
       restrict: 'E',
-      templateUrl: '/partials/card.html',
+      templateUrl: '/partials/dental_card.html',
     }
     return directive;
   };
@@ -21,7 +21,7 @@
         vm: '=',
       },
       restrict: 'E',
-      templateUrl: '/partials/step_one.html',
+      templateUrl: '/partials/dental_step_one.html',
       controller: 'MainCtrl',
       controllerAs: 'vm',
       bindToController: true,
@@ -35,7 +35,7 @@
         vm: '=',
       },
       restrict: 'E',
-      templateUrl: '/partials/step_two.html',
+      templateUrl: '/partials/dental_step_two.html',
       controller: 'MainCtrl',
       controllerAs: 'vm',
       bindToController: true,
