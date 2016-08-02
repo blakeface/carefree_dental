@@ -7,6 +7,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  max-width: 800px;
 }
 
 .purple-faces-container {
@@ -22,4 +23,41 @@
 .purple-faces-container:hover > a,
 .purple-faces-container:active > a {
   visibility: visible;
+}
+
+.note {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.note > p {
+  margin: 0px;
+}
+
+thead > tr:first-child > td {
+  transform: rotate(270deg);
+  text-align: center;
+  height: 200px;
+}
+
+thead > tr:first-child > td:not(:first-child):not(:last-child) {
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+table:not(> thead:first-child) {
+  border: 1px solid black;
+}
+
+thead > tr:nth-child(2) {
+  background: rgba(189, 189, 189, 0.5);
+}
+
+thead > tr:nth-child(2) > th > label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+  padding: 5px;
 }

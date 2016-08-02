@@ -1,8 +1,40 @@
 <span>
   <h3><span class="purple">Step 2:</span> Select the services you need to see your savings:</h3>
 
-  <p>
-    The follow dental savings information chart compares actual costs to discounted costs for common dental services.
-    We've already filled in a few boxes for you to help you get started.
-  </p>
+  <div class="note">
+    <p>
+      The follow dental savings information chart compares actual costs to discounted costs for common dental services.
+    </p>
+    <p>
+      We've already filled in a few boxes for you to help you get started.
+    </p>
+  </div>
+
+  <table class="table-responsive">
+    <thead>
+      <tr>
+        <td></td>
+        <td ng-repeat="service in vm.services track by $index">
+          {{service}}
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <th># of Individuals</th>
+        <th ng-repeat="service in vm.services track by $index">
+          <label for="{{service}}">
+            Select All
+            <input id="{{service}}" type="checkbox" value="{{service}}">
+          </label>
+        </th>
+        <th>Annual Savings*</th>
+      </tr>
+    </thead>
+      <tr>
+
+      </tr>
+    <tbody>
+    </tbody>
+  </table>
+
 </span>

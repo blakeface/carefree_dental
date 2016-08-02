@@ -7,8 +7,10 @@
 
   function stepTwo(){
     const directive = {
-      scope: '=',
-      restrict: "E",
+      scope: {
+        vm: '=',
+      },
+      restrict: 'E',
       templateUrl: '/partials/step_two.html',
       controller: Controller,
       controllerAs: 'vm',
@@ -20,6 +22,9 @@
   Controller.$inject = [];
   function Controller() {
     const vm = this;
+
+    vm.services = ['Oral Exam', 'Cleaning', 'Fillings', 'X-Rays', 'Root Canal', 'Crown', 'Upper Denture', 'Braces'];
+
   };
 
 
