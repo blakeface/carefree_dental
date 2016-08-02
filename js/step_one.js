@@ -7,7 +7,9 @@
 
   function stepOne(){
     const directive = {
-      scope: '=',
+      scope: {
+        vm: '=',
+      },
       restrict: 'E',
       templateUrl: '/partials/step_one.html',
       controller: Controller,
@@ -21,8 +23,8 @@
   function Controller($scope) {
     const vm = this;
 
-    vm.faces = ['hi', 'bye'];
-    vm.testing = 'hiiii';
+    vm.numberOfFaces = 10;
+
   };
 
 
