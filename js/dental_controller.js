@@ -18,12 +18,45 @@
       vm.tableRows = [];
       for (var i = 0; i < num+1; i++) {
         vm.tableRows[i] = {
-          annualCost: 0,
+          annualSavings: 0,
         }
       }
     }
 
-    vm.services = ['Oral Exam', 'Cleaning', 'Fillings', 'X-Rays', 'Root Canal', 'Crown', 'Upper Denture', 'Braces'];
+    vm.services = [
+      {
+        name: 'Oral Exam',
+        savings: 60,
+      },
+      {
+        name: 'Cleaning',
+        savings: 60,
+      },
+      {
+        name: 'Fillings',
+        savings: 60,
+      },
+      {
+        name: 'X-Rays',
+        savings: 60,
+      },
+      {
+        name: 'Root Canal',
+        savings: 60,
+      },
+      {
+        name: 'Crown',
+        savings: 60,
+      },
+      {
+        name: 'Upper Denture',
+        savings: 60,
+      },
+      {
+        name: 'Braces',
+        savings: 60,
+      },
+    ];
 
   };
 })()

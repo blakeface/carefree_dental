@@ -3,7 +3,7 @@
 Created for a take-home exam.  
 
 ##To import card:  
-1.  Add a  ```<dental-card />``` element to index.html or .html partial
+1.  Add the  ```<dental-card />``` element to index.html or .html partial
 2.  Import the following partials:
   1.  dental_card.html  
   2.  dental_step_one.html  
@@ -13,6 +13,7 @@ Created for a take-home exam.
   2.  dental_factory.js  
   3.  dental_controller.js  
   4.  dental_directives.js  
+4.  Import the ```dental_style.css``` file and reference it in your index.html head
 
 ##Dependencies:
 1.  AngularJS 1.5.8

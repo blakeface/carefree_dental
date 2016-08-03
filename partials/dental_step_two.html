@@ -10,12 +10,12 @@
     </p>
   </div>
 
-  <table class="table">
+  <table class="table-hover">
     <thead>
       <tr>
         <td></td>
         <td ng-repeat="service in vm.services track by $index">
-          {{service}}
+          {{service.name}}
         </td>
         <td></td>
       </tr>
@@ -23,9 +23,9 @@
       <tr>
         <th># of Individuals</th>
         <th ng-repeat="service in vm.services track by $index">
-          <label for="{{service}}">
+          <label for="{{service.name}}">
             Select All
-            <input id="{{service}}" type="checkbox" value="{{service}}">
+            <input id="{{service.name}}" type="checkbox">
           </label>
         </th>
         <th>Annual Savings*</th>
@@ -36,12 +36,39 @@
       <tr ng-repeat="row in vm.tableRows track by $index">
         <td>Person {{$index + 1}}</td>
         <td ng-repeat="service in vm.services track by $index">
-          <input type="checkbox" value="{{service}}">
+          <input type="checkbox" value="{{service.savings}}">
         </td>
-        <td>{{row.annualCost}}</td>
+        <td>{{row.annualSavings}}</td>
       </tr>
     </tbody>
   </table>
-  <h3>{{vm.tableRows.length}}</h3>
+
+  <div class="table-footer">
+    <p>+ Add Another Person</p>
+    <p>
+      * This is an example only.
+      Actual costs and savings vary by provider, service and geographical area.
+      Cost of card: $191.40 ($15.95/mo for 12 months).
+    </p>
+  </div>
+
+  <div class="summary">
+    <div class="cost col-md-6 col-lg-6">
+      <h3>Cost of the Carefree Dental Card:</h3>
+      <h3>{{vm.monthlyCost}}</h3>
+      <p>
+        Annual cost of the Carefree Dental card is {{vm.annualCost}}.
+      </p>
+    </div>
+    <div class="saving col-md-6 col-lg-6">
+      <h3>Estimated Yearly Savings:</h3>
+      <h3>{{vm.monthlySavings}}</h3>
+      <p>
+        That's over {{vm.movieTickets}} movieTickets!
+      </p>
+    </div>
+  </div>
+
+  <button class="btn btn-default" type="button">Sign Up &amp; Start Saving Today!</button>
 
 </span>
